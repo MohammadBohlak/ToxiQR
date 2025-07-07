@@ -1,0 +1,39 @@
+{
+  "navbar": {
+    "instructions": "Instructions",
+    "ourBlog": "Our blog",
+    "press": "Press",
+    "join": "Join us"
+  },
+  "contributing": {
+    "title": "Contribute to protecting people and the environment",
+    "description": "Every photo or observation you record of a snake whether found in the wild or near homes can greatly enhance our understanding of snake species and help determine their level of venomousness. Through our website, we analyze your sightings with precision to assess whether the snake is venomous, and we share this data with global biodiversity repositories to assist scientists and wildlife experts. A single photo from you could make a difference and help keep others safe."
+  },
+  "features": {
+    "title": "Nature at Your Fingertips",
+    "continueTracking": {
+      "title": "Keep Observing Snakes",
+      "description": "Submit your snake sightings to help build a global understanding of their distribution and behavior."
+    },
+    "createUsefulData": {
+      "title": "Generate Valuable Snake Data",
+      "description": "Every photo helps experts detect venomous species and study snake habitats more effectively."
+    },
+    "collectiveIdentification": {
+      "title": "Crowdsource Identification",
+      "description": "Let the community and specialists help identify the type of snake you've encountered."
+    },
+    "beCitizenScientist": {
+      "title": "Be a Snake Safety Advocate",
+      "description": "Join scientific efforts to map venomous snakes and keep your community informed and protected."
+    },
+    "discoverNature": {
+      "title": "Discover Snake Diversity",
+      "description": "Learn about the many snake species in your region and how to safely interact with wildlife."
+    },
+    "fuelDiversity": {
+      "title": "Support Biodiversity Monitoring",
+      "description": "Your observations contribute to global snake research and help preserve ecological balance."
+    }
+  }
+}
