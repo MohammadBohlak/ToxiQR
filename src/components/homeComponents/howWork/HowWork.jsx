@@ -1,5 +1,6 @@
 // Timeline.js
 
+import { useTranslation } from "react-i18next";
 import { MainTitle } from "../../common/texts";
 import MyContainer from "../../ui/myContainer/MyContainer";
 import {
@@ -11,11 +12,12 @@ import {
 } from "./howWork.styles";
 
 export default function HowWork() {
+  const { t } = useTranslation();
   return (
     <MyContainer>
       <section style={{ marginTop: "50px" }}>
         <MainTitle style={{ marginBottom: "30px" }} $align="center">
-          How it work
+          {t("howWork")}
         </MainTitle>
         <TimelineContainer>
           <StageContainer className="stages">
