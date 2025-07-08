@@ -36,5 +36,18 @@
       "title": "Support Biodiversity Monitoring",
       "description": "Your observations contribute to global snake research and help preserve ecological balance."
     }
+  },
+  "devices": {
+    "subTitle": "Works on all your devices",
+    "text": "Install our mobile apps so you can always observe, even without cell reception or Wi-Fi.",
+    "buttons": {
+      "googlePlay": "Download on Google Play",
+      "appStore": "Download on the App Store"
+    }
+  },
+  "expert": {
+    "title": "Expert opinions",
+    "name": "Dr. Leila Nazari",
+    "text": "Platforms like this one revolutionize how we study venomous snakes in the field. By combining community observations with real-time analysis, we unlock new paths for both ecological research and public health awareness. I believe this is the future of citizen-powered science, especially in regions where snake encounters are common."
   }
 }

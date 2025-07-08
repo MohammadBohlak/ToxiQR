@@ -9,6 +9,8 @@ import SwiperSnakes from "../../components/homeComponents/swiperSnakes/SwiperSna
 import HowWork from "../../components/homeComponents/howWork/HowWork";
 import { ContributingSection } from "../../components/homeComponents/contributing/ContributingSection";
 import Features from "../../components/homeComponents/features/Features";
+import Devices from "../../components/homeComponents/devices/Devices";
+import SwiperExperts from "../../components/swiperExperts/SwiperExperts";
 
 const StyledHome = styled.section`
   height: 500px;
@@ -24,6 +26,8 @@ const Home = () => {
       <HowWork />
       <ContributingSection />
       <Features />
+      <Devices />
+      <SwiperExperts />
     </StyledHome>
   );
 };

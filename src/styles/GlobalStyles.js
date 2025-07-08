@@ -17,6 +17,13 @@ export const GlobalStyles = createGlobalStyle`
   }
  
   :root{
+    --p-container: 60px ;
+    @media screen and (max-width: 567px) {
+      --p-container:30px;
+    }
+    @media screen and (max-width: 400px) {
+      --p-container:5px;
+    }
     --height-nav:   75px ;
     --m-top : 50px ;
     --big-text: 4.2rem ; 

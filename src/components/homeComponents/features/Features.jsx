@@ -7,22 +7,8 @@ import { BiClipboard } from "react-icons/bi";
 import MyContainer from "../../ui/myContainer/MyContainer";
 import { Col, Row } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
-import styled from "styled-components";
 import { MainTitle, SubTitle, Text } from "../../common/texts";
-
-const StyledFeature = styled.section`
-  background-color: ${({ theme }) => theme.colors.backLight};
-  padding: var(--m-top) 0;
-  color: ${({ theme }) => theme.colors.text};
-`;
-
-const FeatureIcon = styled.div`
-  svg {
-    font-size: 80px;
-    color: ${({ theme }) => theme.colors.primary};
-    margin-right: 10px;
-  }
-`;
+import { BoxFeatures, FeatureIcon, StyledFeature } from "./features.styles";
 
 const featuresList = [
   { icon: <BiClipboard />, key: "continueTracking" },
@@ -32,18 +18,7 @@ const featuresList = [
   { icon: <FaCcDiscover />, key: "discoverNature" },
   { icon: <CiBullhorn />, key: "fuelDiversity" },
 ];
-const BoxFeatures = styled.div`
-  @media (max-width: 560px) {
-    flex-direction: column;
-    align-items: center;
-    * {
-      text-align: center;
-    }
-    svg {
-      font-size: 60px;
-    }
-  }
-`;
+
 const Features = () => {
   const { t } = useTranslation();
 
@@ -53,7 +28,7 @@ const Features = () => {
         <MainTitle style={{ marginBottom: "20px" }} $align="center">
           {t("features.title")}
         </MainTitle>
-        <Row className="gap-5 justify-content-between">
+        <Row className="m-0 gap-5 justify-content-between">
           {featuresList.map(({ icon, key }, idx) => (
             <Col md={5} key={idx}>
               <BoxFeatures className="d-flex gap-3 align-items-center">
