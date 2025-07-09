@@ -11,8 +11,9 @@ const LeftContent = styled(Col)`
   ${SubTitle} {
     margin-bottom: 15px;
   }
-  padding: 50px 20px 20px 20px;
 
+  /* padding: 50px 20px 20px 20px; */
+  padding: 50px 20px 20px var(--p-container);
   min-height: 350px;
   @media (max-width: 768px) {
     text-align: center;

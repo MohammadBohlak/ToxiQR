@@ -10,9 +10,9 @@ export const SubTitle = styled.h2`
   font-size: var(--normal-text) !important;
   text-align: ${({ $align }) => ($align ? $align : "initial")};
   color: ${({ theme, $color }) => ($color ? $color : theme.colors.text)};
-  font-weight: bold;
+  font-weight: ${({ $bold }) => ($bold ? "bold" : "normal")};
 `;
-export const Text = styled.span`
+export const Text = styled.div`
   font-size: var(--small-text);
   text-align: ${({ $align }) => ($align ? $align : "initial")};
   color: ${({ theme, $color }) => ($color ? $color : theme.colors.text)};

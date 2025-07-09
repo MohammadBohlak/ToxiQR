@@ -5,12 +5,17 @@ export const StyledSwiper = styled.section`
   background: #eee;
   padding-top: var(--m-top);
   .swiper {
+    background: #eee;
     direction: ltr;
     width: 100%;
-    height: 100%;
+    height: fit-content;
     padding-bottom: 60px;
+    .swiper-wrapper {
+      align-items: center;
+    }
+
     .swiper-pagination {
-      transform: translate(-50%, -20px);
+      transform: translate(-70%, -20px);
       margin: auto;
     }
     .swiper-pagination .swiper-pagination-bullet {
@@ -30,6 +35,8 @@ export const StyledSwiper = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: fit-content;
+    padding: 0px var(--p-container);
     .left {
       flex: 1;
     }
@@ -48,6 +55,9 @@ export const StyledSwiper = styled.section`
       gap: 20px;
       .right {
         justify-content: center;
+        img {
+          width: 50%;
+        }
       }
       .left {
         align-items: center;

@@ -16,28 +16,26 @@ const SwiperExperts = () => {
   const { t } = useTranslation();
   return (
     <StyledSwiper>
-      <MyContainer>
-        <MainTitle>{t("expert.title")}</MainTitle>
-        <Swiper
-          pagination={{
-            dynamicBullets: true,
-          }}
-          modules={[Pagination]}
-          className="mySwiper"
-        >
-          {[1, 2, 3, 4, 5, 6].map((item, idx) => (
-            <SwiperSlide key={idx}>
-              <div className="left d-flex flex-column gap-3">
-                <SubTitle>{t("expert.name")}</SubTitle>
-                <Text>{t("expert.text")}</Text>
-              </div>
-              <div className="right">
-                <img src={expert} alt="expoer image" />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </MyContainer>
+      <MainTitle className="mb-5">{t("expert.title")}</MainTitle>
+      <Swiper
+        pagination={{
+          dynamicBullets: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        {[1, 2, 3, 4, 5, 6].map((item, idx) => (
+          <SwiperSlide key={idx}>
+            <div className="left d-flex flex-column gap-3">
+              <SubTitle>{t("expert.name")}</SubTitle>
+              <Text>{t("expert.text")}</Text>
+            </div>
+            <div className="right">
+              <img src={expert} alt="expoer image" />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </StyledSwiper>
   );
 };
