@@ -8,11 +8,12 @@ import { useTranslation } from "react-i18next";
 
 const TextContent = styled.div`
   div {
-    color: #333;
+    color: #555;
     text-transform: uppercase;
+    font-size: var(--min-text);
   }
   a {
-    font-size: var(--min-text);
+    font-size: var(--small-text);
     text-decoration: none;
   }
 `;

@@ -8,14 +8,14 @@ const Blogs = ({ blogs }) => {
     <>
       {blogs.map((item, idx) => (
         <BlogCard $shadow={blogs.length > 1} key={idx}>
-          <SubTitle $bold={true} className="mb-4">
+          <SubTitle className="mb-4">
             {idx + 1}. In the {item.location}
           </SubTitle>
           {item.image && (
             <Card.Img variant="top" src={item.image} alt={item.title} />
           )}
           <Card.Body className="p-0 pt-3">
-            <Text $bold={false} className="mb-2">
+            <Text $bold={true} className="mb-2">
               {item.title}
             </Text>
             <SmallText className="mb-2 text-muted text-uppercase ">

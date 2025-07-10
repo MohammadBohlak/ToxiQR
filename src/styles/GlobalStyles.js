@@ -7,12 +7,12 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   html{
-    font-family: 'Lato', sans-serif !important;
+    font-family: 'Tajawal', sans-serif !important;
     font-size: 10px;
   }
   body{
-
-    font-family: 'Lato', sans-serif !important;
+    background-color: #fff;
+    font-family: 'Tajawal', sans-serif !important;
     padding-top: var(--height-nav);
   }
  

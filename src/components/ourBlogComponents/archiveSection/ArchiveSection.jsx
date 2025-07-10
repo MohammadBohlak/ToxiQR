@@ -74,9 +74,7 @@ const ArchiveSection = () => {
         </Button>
       </StyledInputGroup>
 
-      <SubTitle $bold={true} className="mt-4 mb-4">
-        Archive
-      </SubTitle>
+      <SubTitle className="mt-4 mb-4">Archive</SubTitle>
       <Table striped bordered hover responsive>
         <thead>
           <tr>

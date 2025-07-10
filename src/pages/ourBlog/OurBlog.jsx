@@ -9,7 +9,7 @@ import { StyledSection } from "../../components/common/sections";
 const OurBlog = () => (
   <StyledSection>
     <MyContainer>
-      <MainTitle $align="initial" $bold={true} className="mb-5">
+      <MainTitle $align="initial" className="mb-5">
         Our Blog
       </MainTitle>
       <Row className="justify-content-between m-0">

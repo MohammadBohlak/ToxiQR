@@ -86,81 +86,83 @@ export default function DetectionPage() {
   };
 
   return (
-    <MyContainer>
-      <StyledSection>
-        <Row className="m-0 mb-3">
-          <Col>
-            <MainTitle $align="center" className="mb-3">
-              Use ToxiQR’s Detection AI to Identify Snakes and Spiders!
-            </MainTitle>
-            <SubTitle $align="center">
-              Please read the instructions before uploading the image
-            </SubTitle>
-          </Col>
-        </Row>
-
-        {error && (
+    <div style={{ background: "#fff0b6f0", padingTop: "var(--m-top)" }}>
+      <MyContainer>
+        <StyledSection>
           <Row className="m-0 mb-3">
-            <Col md={8}>
-              <Alert variant="danger">{error}</Alert>
+            <Col>
+              <MainTitle $align="center" className="mb-3">
+                Use ToxiQR’s Detection AI to Identify Snakes and Spiders!
+              </MainTitle>
+              <SubTitle $align="center">
+                Please read the instructions before uploading the image
+              </SubTitle>
             </Col>
           </Row>
-        )}
 
-        <Row className="m-0 mb-4 justify-content-center">
-          <Col md={4}>
-            <Form.Group controlId="typeSelect">
-              <Select>
-                <option value="">Select type</option>
-                <option value="snake">Snake</option>
-                <option value="spider">Spider</option>
-              </Select>
-            </Form.Group>
-          </Col>
-        </Row>
+          {error && (
+            <Row className="m-0 mb-3">
+              <Col md={8}>
+                <Alert variant="danger">{error}</Alert>
+              </Col>
+            </Row>
+          )}
 
-        <Row className="m-0 justify-content-center">
-          <Col md={8}>
-            <UploadZone
-              //   center
-              $dragActive={dragActive}
-              onClick={handleClickZone}
-              onDragEnter={handleDrag}
-              $align="center"
-              onDragOver={handleDrag}
-              onDragLeave={handleDrag}
-              onDrop={handleDrop}
-            >
-              <HiddenInput
-                ref={fileInputRef}
-                type="file"
-                accept="image/*"
-                onChange={handleChange}
-              />
+          <Row className="m-0 mb-4 justify-content-center">
+            <Col md={4}>
+              <Form.Group controlId="typeSelect">
+                <Select>
+                  <option value="">Select type</option>
+                  <option value="snake">Snake</option>
+                  <option value="spider">Spider</option>
+                </Select>
+              </Form.Group>
+            </Col>
+          </Row>
 
-              {file ? (
-                <>
-                  <DeleteButton onClick={handleDelete}>
-                    <FiX />
-                  </DeleteButton>
-                  <img
-                    className="preview"
-                    src={URL.createObjectURL(file)}
-                    alt="Preview"
-                  />
-                </>
-              ) : (
-                <UploadContent>
-                  <FiUpload size={48} />
-                  <SmallText className="text-muted">
-                    Drop/Upload/Paste Image here
-                  </SmallText>
-                </UploadContent>
-              )}
-            </UploadZone>
-          </Col>
-        </Row>
-      </StyledSection>
-    </MyContainer>
+          <Row className="m-0 justify-content-center">
+            <Col md={8}>
+              <UploadZone
+                //   center
+                $dragActive={dragActive}
+                onClick={handleClickZone}
+                onDragEnter={handleDrag}
+                $align="center"
+                onDragOver={handleDrag}
+                onDragLeave={handleDrag}
+                onDrop={handleDrop}
+              >
+                <HiddenInput
+                  ref={fileInputRef}
+                  type="file"
+                  accept="image/*"
+                  onChange={handleChange}
+                />
+
+                {file ? (
+                  <>
+                    <DeleteButton onClick={handleDelete}>
+                      <FiX />
+                    </DeleteButton>
+                    <img
+                      className="preview"
+                      src={URL.createObjectURL(file)}
+                      alt="Preview"
+                    />
+                  </>
+                ) : (
+                  <UploadContent>
+                    <FiUpload size={48} />
+                    <SmallText className="text-muted">
+                      Drop/Upload/Paste Image here
+                    </SmallText>
+                  </UploadContent>
+                )}
+              </UploadZone>
+            </Col>
+          </Row>
+        </StyledSection>
+      </MyContainer>
+    </div>
   );
 }

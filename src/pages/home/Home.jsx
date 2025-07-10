@@ -11,6 +11,7 @@ import { ContributingSection } from "../../components/homeComponents/contributin
 import Features from "../../components/homeComponents/features/Features";
 import Devices from "../../components/homeComponents/devices/Devices";
 import SwiperExperts from "../../components/swiperExperts/SwiperExperts";
+import DetectionPage from "../Detection/DetectionPage";
 
 const StyledHome = styled.section`
   height: 500px;
@@ -24,6 +25,7 @@ const Home = () => {
     <StyledHome>
       <SwiperSnakes images={[img1, img2, img3, img4, img5]} />
       <HowWork />
+      <DetectionPage />
       <ContributingSection />
       <Features />
       <Devices />

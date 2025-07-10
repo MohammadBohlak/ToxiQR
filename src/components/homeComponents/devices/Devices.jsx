@@ -13,9 +13,7 @@ const Devices = () => {
     <>
       <StyledDevices className="m-0">
         <LeftDevices md={6} className="bg-white d-flex flex-column gap-4">
-          <SubTitle $align="initial" $bold={false}>
-            {t("devices.subTitle")}
-          </SubTitle>
+          <SubTitle $align="initial">{t("devices.subTitle")}</SubTitle>
           <Text>{t("devices.text")}</Text>
           <div className="buttons d-flex gap-4 flex-wrap align-items-center mt-2">
             <a href="https://play.google.com/store/apps/details?id=your.app.id">

@@ -10,12 +10,18 @@ import {
   StageContainer,
   TimelineContainer,
 } from "./howWork.styles";
+import styled from "styled-components";
 
+const StyledHowWork = styled.section`
+  /* background-color: ${({ theme }) => theme.colors.backLight}; */
+  background-color: #fff;
+  padding: var(--m-top) 0;
+`;
 export default function HowWork() {
   const { t } = useTranslation();
   return (
-    <MyContainer>
-      <section style={{ marginTop: "50px" }}>
+    <StyledHowWork>
+      <MyContainer>
         <MainTitle style={{ marginBottom: "30px" }} $align="center">
           {t("howWork")}
         </MainTitle>
@@ -34,7 +40,7 @@ export default function HowWork() {
             <Circle>3</Circle>
           </StageContainer>
         </TimelineContainer>
-      </section>
-    </MyContainer>
+      </MyContainer>
+    </StyledHowWork>
   );
 }

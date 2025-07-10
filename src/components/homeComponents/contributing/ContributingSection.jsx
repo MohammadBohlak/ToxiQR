@@ -33,7 +33,7 @@ const RightContent = styled(Col)`
 export const ContributingSection = () => {
   const { t } = useTranslation();
   return (
-    <section style={{ marginTop: "50px" }}>
+    <section>
       <Row style={{ maxWidth: "100%", margin: "0" }}>
         <LeftContent
           md={6}

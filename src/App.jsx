@@ -1,4 +1,4 @@
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { theme } from "./styles/themes";
 import { GlobalStyles } from "./styles/GlobalStyles";
 import "./i18n";
@@ -28,7 +28,7 @@ function App() {
           <Route path="/press" element={<Press />} />
           <Route path="/blog" element={<OurBlog />} />
           <Route path="/blog/:id" element={<Blog />} />
-          <Route path="/detection" element={<Detection />} />
+          {/* <Route path="/detection" element={<Detection />} /> */}
         </Routes>
       </ThemeProvider>
     </div>

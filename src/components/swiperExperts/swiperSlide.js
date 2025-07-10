@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const StyledSwiper = styled.section`
   height: 500px;
-  background: #eee;
+  background: ${({ theme }) => theme.colors.backLight};
   padding-top: var(--m-top);
   .swiper {
-    background: #eee;
+    background: ${({ theme }) => theme.colors.backLight};
     direction: ltr;
     width: 100%;
     height: fit-content;
