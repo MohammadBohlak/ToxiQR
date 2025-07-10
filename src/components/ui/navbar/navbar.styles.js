@@ -34,7 +34,13 @@ export const StyledNavbar = styled(Navbar)`
     font-size: var(--small-text);
     height: 35px;
   }
+  .navbar-toggler:focus {
+    box-shadow: none;
+
+    box-shadow: 0 0 3px 0px ${({ theme }) => theme.colors.primary} inset;
+  }
   .show + .nav-buttons {
+    padding: 0 0 10px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;

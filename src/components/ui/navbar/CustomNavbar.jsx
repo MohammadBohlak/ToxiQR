@@ -79,6 +79,14 @@ const CustomNavbar = () => {
               >
                 {t("navbar.press")}
               </StyledNavLink>
+              <StyledNavLink
+                to="/detection"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                Detection
+              </StyledNavLink>
             </Nav>
           </Navbar.Collapse>
           <div

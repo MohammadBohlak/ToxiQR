@@ -9,6 +9,8 @@ import Home from "./pages/home/Home";
 import { Route, Routes } from "react-router-dom";
 import Press from "./pages/press/Press";
 import OurBlog from "./pages/ourBlog/OurBlog";
+import Blog from "./components/ourBlogComponents/blog/Blog";
+import Detection from "./pages/Detection/DetectionPage";
 
 function App() {
   // const lang = useSelector((state) => state.lang.language)
@@ -25,6 +27,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/press" element={<Press />} />
           <Route path="/blog" element={<OurBlog />} />
+          <Route path="/blog/:id" element={<Blog />} />
+          <Route path="/detection" element={<Detection />} />
         </Routes>
       </ThemeProvider>
     </div>

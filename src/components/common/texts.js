@@ -17,3 +17,8 @@ export const Text = styled.div`
   text-align: ${({ $align }) => ($align ? $align : "initial")};
   color: ${({ theme, $color }) => ($color ? $color : theme.colors.text)};
 `;
+export const SmallText = styled.div`
+  font-size: var(--min-text);
+  text-align: ${({ $align }) => ($align ? `${$align}` : "initial")};
+  color: ${({ theme, $color }) => ($color ? $color : theme.colors.text)};
+`;
