@@ -1,6 +1,5 @@
 // DetectionPage.jsx
 import React, { useState, useRef, useCallback, useEffect } from "react";
-import styled, { css } from "styled-components";
 import { FiUpload, FiX } from "react-icons/fi";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -18,6 +17,7 @@ import {
   UploadContent,
   UploadZone,
 } from "./detection.styles";
+import FormDetection from "../../components/formDetection/FormDetection";
 
 export default function DetectionPage() {
   const [dragActive, setDragActive] = useState(false);
@@ -123,7 +123,6 @@ export default function DetectionPage() {
           <Row className="m-0 justify-content-center">
             <Col md={8}>
               <UploadZone
-                //   center
                 $dragActive={dragActive}
                 onClick={handleClickZone}
                 onDragEnter={handleDrag}
@@ -159,6 +158,9 @@ export default function DetectionPage() {
                   </UploadContent>
                 )}
               </UploadZone>
+            </Col>
+            <Col md={12}>
+              <FormDetection />
             </Col>
           </Row>
         </StyledSection>

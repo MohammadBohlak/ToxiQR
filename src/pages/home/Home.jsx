@@ -12,25 +12,25 @@ import Features from "../../components/homeComponents/features/Features";
 import Devices from "../../components/homeComponents/devices/Devices";
 import SwiperExperts from "../../components/swiperExperts/SwiperExperts";
 import DetectionPage from "../Detection/DetectionPage";
+import Footer from "../../components/ui/footer/Footer";
 
 const StyledHome = styled.section`
-  height: 500px;
+  /* height: 500px; */
   width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
 `;
 const Home = () => {
   return (
-    <StyledHome>
-      <SwiperSnakes images={[img1, img2, img3, img4, img5]} />
-      <HowWork />
-      <DetectionPage />
-      <ContributingSection />
-      <Features />
-      <Devices />
-      <SwiperExperts />
-    </StyledHome>
+    <>
+      <StyledHome>
+        <SwiperSnakes images={[img1, img2, img3, img4, img5]} />
+        <HowWork />
+        <DetectionPage />
+        <ContributingSection />
+        <Features />
+        <Devices />
+        <SwiperExperts />
+      </StyledHome>
+    </>
   );
 };
 

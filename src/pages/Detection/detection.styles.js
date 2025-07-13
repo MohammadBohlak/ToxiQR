@@ -62,5 +62,11 @@ export const Select = styled(Form.Select)`
     box-shadow: none;
     border-color: ${({ theme }) => theme.colors.primary};
   }
+
+  option:checked {
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: #fff;
+  }
+
   font-size: var(--min-text);
 `;

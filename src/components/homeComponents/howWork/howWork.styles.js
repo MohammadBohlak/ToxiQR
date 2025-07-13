@@ -4,21 +4,41 @@ import MyContainer from "../../ui/myContainer/MyContainer";
 // الحاوية الرئيسية: أفقي على الديسكتوب، عمودي على الموبايل
 export const TimelineContainer = styled.div`
   display: flex !important;
-  gap: 20px;
+  gap: var(--gap);
   flex-direction: column;
+  --width-stage: 250px;
+  --gap: 30px;
+  @media (max-width: 992px) {
+    --width-stage: 200px;
+  }
   @media (max-width: 768px) {
     flex-direction: row-reverse;
-    column-gap: 20px;
+    column-gap: var(--gap);
     justify-content: center;
   }
 `;
 
 // تغليف كل مرحلة (LargeCircle فوق و Circle الرقم تحت)
 export const Stage = styled.div`
-  width: 200px;
-  height: 200px;
+  width: var(--width-stage);
+  height: var(--width-stage);
+
   border-radius: 50%;
   background-color: #efefef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    max-width: 70%;
+  }
+  .handPhone {
+    transform: translateY(-30%);
+    width: 50%;
+  }
+  .phone {
+    width: 50%;
+    transform: translateY(30%);
+  }
 `;
 
 // الدائرة الصغيرة للرقم (كما قبل)
@@ -51,10 +71,16 @@ export const StageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  &.tl {
+    padding: 0 calc(calc(var(--width-stage) / 2) - calc(var(--gap) / 2));
+  }
   @media (max-width: 768px) {
     flex-direction: column;
+    &.tl {
+      padding: calc(calc(var(--width-stage) / 2) - calc(var(--gap) / 2)) 0;
+    }
     &.stages {
-      row-gap: 10px;
+      row-gap: var(--gap);
     }
   }
 `;

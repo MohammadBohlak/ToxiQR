@@ -61,7 +61,7 @@ const CustomNavbar = () => {
                   isActive ? "nav-link active" : "nav-link"
                 }
               >
-                {t("navbar.instructions")}
+                {t("navbar.home")}
               </StyledNavLink>
               <StyledNavLink
                 to="/blog"

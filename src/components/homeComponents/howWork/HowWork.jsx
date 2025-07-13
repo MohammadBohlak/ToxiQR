@@ -11,6 +11,11 @@ import {
   TimelineContainer,
 } from "./howWork.styles";
 import styled from "styled-components";
+import Shared from "./Shared";
+import phone from "../../../assets/images/howWork/phone.png";
+import handPhone from "../../../assets/images/howWork/handPhone.png";
+import msg from "../../../assets/images/howWork/msg.png";
+import screen from "../../../assets/images/howWork/screen.png";
 
 const StyledHowWork = styled.section`
   /* background-color: ${({ theme }) => theme.colors.backLight}; */
@@ -27,12 +32,19 @@ export default function HowWork() {
         </MainTitle>
         <TimelineContainer>
           <StageContainer className="stages">
-            <Stage></Stage>
-            <Stage></Stage>
-            <Stage></Stage>
+            <Stage>
+              <img className="phone" src={phone} />
+              <img className="handPhone" src={handPhone} />
+            </Stage>
+            <Stage>
+              <img className="screen" src={screen} />
+            </Stage>
+            <Stage>
+              <img className="msg" src={msg} />
+            </Stage>
           </StageContainer>
 
-          <StageContainer>
+          <StageContainer className="tl">
             <Circle>1</Circle>
             <Connector></Connector>
             <Circle>2</Circle>

@@ -3,7 +3,7 @@ import { SwiperSlide } from "swiper/react";
 
 export const SwiperSection = styled.section`
   width: 100%;
-  height: 100%;
+  height: 500px;
 
   .swiper {
     width: 100%;
