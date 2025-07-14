@@ -32,6 +32,9 @@ export const Stage = styled.div`
   justify-content: center;
   img {
     max-width: 80%;
+    &.screen {
+      max-width: 75%;
+    }
   }
   .handPhone {
     margin-top: 50px;

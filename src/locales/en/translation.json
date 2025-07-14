@@ -55,8 +55,10 @@
   },
   "expert": {
     "title": "Expert opinions",
-    "name": "Prof. Ahmed Mohajja Alshammari, Ecology and Ecotoxicology , Saudi Arabia",
-    "text": "ToxiQR does a remarkable job at telling apart venomous from non-venomous snakes and spiders, also it does it fast. But what really makes it stand out is that the results aren’t left to AI alone. Every prediction is carefully reviewed by a real expert, adding that extra layer of trust. It’s this smart mix of technology and human experience that makes ToxiQR such a reliable and reassuring tool for anyone dealing with snake encounters."
+    "text": "ToxiQR does a remarkable job at telling apart venomous from non-venomous snakes and spiders, also it does it fast. But what really makes it stand out is that the results aren’t left to AI alone. Every prediction is carefully reviewed by a real expert, adding that extra layer of trust. It’s this smart mix of technology and human experience that makes ToxiQR such a reliable and reassuring tool for anyone dealing with snake encounters.",
+    "name": "Prof. Ahmed Mohajja Alshammari",
+    "specialist": "Ecology and Ecotoxicology ",
+    "country": "Saudi Arabia"
   },
   "press": {
     "title": "Press",

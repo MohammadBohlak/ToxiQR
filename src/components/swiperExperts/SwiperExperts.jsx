@@ -1,3 +1,4 @@
+import { MdLocationOn } from "react-icons/md";
 import { MainTitle, SubTitle, Text } from "../common/texts";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -26,8 +27,13 @@ const SwiperExperts = () => {
         {[1, 2].map((item, idx) => (
           <SwiperSlide key={idx}>
             <div className="left d-flex flex-column gap-3">
-              <SubTitle>{t("expert.name")}</SubTitle>
               <Text>{t("expert.text")}</Text>
+              <SubTitle $color="var(--primary)">{t("expert.name")}</SubTitle>
+              <Text>{t("expert.specialist")}</Text>
+              <Text>
+                {" "}
+                <MdLocationOn /> {t("expert.country")}
+              </Text>
             </div>
             <div className="right">
               <img src={expert} alt="expoer image" />

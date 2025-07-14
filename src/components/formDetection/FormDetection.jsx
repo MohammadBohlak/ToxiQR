@@ -16,21 +16,17 @@ export default function FormDetection() {
   return (
     <StyledForm>
       <div className="d-flex gap-4 flex-wrap">
-        {/* حقل البريد الإلكتروني */}
-        <Form.Group controlId="formEmail" style={{ flex: "1 1 300px" }}>
-          <Form.Label>{t("detection.form.email.label")}:</Form.Label>
-          <Form.Control
-            type="email"
-            name="email"
-            placeholder={t("detection.form.email.placeholder")}
-            value={values.email}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            isInvalid={touched.email && !!errors.email}
+        {/* حقل Country باستخدام المكوّن المخصص */}
+        <Form.Group controlId="formCountry" style={{ flex: "1 1 300px" }}>
+          <Form.Label>{t("detection.form.country.label")}:</Form.Label>
+          <CountrySelect
+            name="country"
+            value={values.country}
+            onChange={(val) => setFieldValue("country", val)}
           />
-          <Form.Control.Feedback type="invalid">
-            {errors.email}
-          </Form.Control.Feedback>
+          {touched.country && errors.country && (
+            <div className="invalid-feedback d-block">{errors.country}</div>
+          )}
         </Form.Group>
 
         {/* حقل State */}
@@ -49,18 +45,21 @@ export default function FormDetection() {
             {errors.state}
           </Form.Control.Feedback>
         </Form.Group>
-
-        {/* حقل Country باستخدام المكوّن المخصص */}
-        <Form.Group controlId="formCountry" style={{ flex: "1 1 300px" }}>
-          <Form.Label>{t("detection.form.country.label")}:</Form.Label>
-          <CountrySelect
-            name="country"
-            value={values.country}
-            onChange={(val) => setFieldValue("country", val)}
+        {/* حقل البريد الإلكتروني */}
+        <Form.Group controlId="formEmail" style={{ flex: "1 1 300px" }}>
+          <Form.Label>{t("detection.form.email.label")}:</Form.Label>
+          <Form.Control
+            type="email"
+            name="email"
+            placeholder={t("detection.form.email.placeholder")}
+            value={values.email}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            isInvalid={touched.email && !!errors.email}
           />
-          {touched.country && errors.country && (
-            <div className="invalid-feedback d-block">{errors.country}</div>
-          )}
+          <Form.Control.Feedback type="invalid">
+            {errors.email}
+          </Form.Control.Feedback>
         </Form.Group>
       </div>
     </StyledForm>

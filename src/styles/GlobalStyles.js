@@ -22,6 +22,7 @@ export const GlobalStyles = createGlobalStyle`
   }
  
   :root{
+    --primary: ${({ theme }) => theme.colors.primary} ; 
     --p-container: 60px ;
     @media screen and (max-width: 567px) {
       --p-container:30px;
