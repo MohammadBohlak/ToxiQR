@@ -1,3 +1,4 @@
+import { Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -21,10 +22,26 @@ export const FooterLink = styled(Link)`
     color: ${({ theme }) => theme.colors.primary};
   }
 `;
+
+export const Icons = styled(Col)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0; */
+  @media (max-width: 768px) {
+    column-gap: 15px;
+  }
+`;
 export const SocialIcon = styled.a`
+  @media (max-width: 1200px) {
+    height: 40px;
+    width: 40px;
+    font-size: 28px;
+  }
   color: ${(props) => props.color};
   font-size: 35px;
-  margin-right: 1rem;
+  /* margin-right: ${({ theme }) => (theme.lang == "en" ? "10px" : "auto")}; */
+  /* margin-left: ${({ theme }) => (theme.lang == "ar" ? "10px" : "auto")}; */
   border-radius: 50%;
   height: 50px;
   width: 50px;
@@ -40,6 +57,14 @@ export const SocialIcon = styled.a`
   }
 `;
 
+export const DownloadButtons = styled(Col)`
+  display: flex;
+  gap: 30px;
+  justify-content: end;
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
+`;
 export const DownloadBtn = styled.a`
   display: block;
   display: flex;
@@ -49,6 +74,16 @@ export const DownloadBtn = styled.a`
     max-width: 140px;
     height: auto;
     display: block;
+  }
+  @media (max-width: 1200px) {
+    img {
+      max-width: 120px;
+    }
+  }
+  @media (max-width: 400px) {
+    img {
+      max-width: 100px;
+    }
   }
 `;
 

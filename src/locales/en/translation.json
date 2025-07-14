@@ -55,7 +55,7 @@
   },
   "expert": {
     "title": "Expert opinions",
-    "name": "Dr. Leila Nazari",
+    "name": "Prof. Ahmed Mohajja Alshammari, Ecology and Ecotoxicology , Saudi Arabia",
     "text": "ToxiQR does a remarkable job at telling apart venomous from non-venomous snakes and spiders, also it does it fast. But what really makes it stand out is that the results aren’t left to AI alone. Every prediction is carefully reviewed by a real expert, adding that extra layer of trust. It’s this smart mix of technology and human experience that makes ToxiQR such a reliable and reassuring tool for anyone dealing with snake encounters."
   },
   "press": {
@@ -112,5 +112,69 @@
       "error_not_image": "Pasted content is not an image.",
       "error_invalid": "Please upload a valid image file."
     }
+  },
+  "about": {
+    "title": "About ToxiQR",
+    "text": "ToxiQR is a website that focuses on identifying venomous and non-venomous species including snakes and spiders around the world using artificial intelligence. With advanced image recognition technology, ToxiQR allows users to upload images of any species for identification. ToxiQR aims to raise awareness about various species and provide users with valuable knowledge. Through the use of technology and education, ToxiQR works to transition the community to a safer and more informed world.",
+    "mision": {
+      "title": "Mission",
+      "text": "ToxiQR intends to raise awareness of various venomous and non-venomous species worldwide, including snakes and spiders. It offers an integrated service on the site, developed using artificial intelligence technologies, allowing users to upload photos of specific species to check their toxicity. Through AI detection, ToxiQR aims to enhance knowledge and awareness, enabling people to identify toxic species associated with these organisms. The initiative involves proper sensitization to ensure that the community understands these risks, ultimately contributing to public safety."
+    },
+    "vision": {
+      "title": "Vision",
+      "text": "ToxiQR aspires to be the leading informational website worldwide, utilizing artificial intelligence to identify images of venomous and non-venomous snakes and spiders. The ultimate aim is to provide awareness globally on this subject matter through knowledge that would empower people to make informed decisions, thus safeguarding themselves and their communities."
+    },
+    "team": {
+      "title": "Team Members",
+      "member1": {
+        "name": "Abdulaziz Arif A Alshammari",
+        "specialist": "PharmD, MSc in Clinical Toxicology."
+      },
+      "member2": {
+        "name": "Mohammed Almatrafi",
+        "specialist": "PharmD, Pursuing MSc Clinical Toxicology."
+      }
+    }
+  },
+  "firstAid": {
+    "title": "First Aid for Bites, Stings, and Poisonous Plant Exposure",
+    "snake": {
+      "title": "Snake Bite:",
+      "steps": [
+        "Request an ambulance without delay.",
+        "Try to recall the snake's shape and color to assist with treatment.",
+        "Clean the bite site thoroughly using soap and water.",
+        "Have the person lie down or sit, ensuring the affected limb is in a comfortable position.",
+        "Remove any tight items (such as rings or bracelets) from the affected area to prevent damage from swelling.",
+        "Cover the bite site with a clean, dry bandage.",
+        "Do not apply a tourniquet or tie off the area near the bite.",
+        "Avoid cutting the wound or attempting to suck out the venom.",
+        "Do not apply ice or submerge the wound in water."
+      ]
+    },
+    "spider": {
+      "title": "Spider Bite:",
+      "steps": [
+        "Remain as calm as possible and try to identify the spider species if you can.",
+        "Clean the bite area with soap and water.",
+        "Use cold compresses to help reduce swelling.",
+        "Elevate the affected area as much as possible.",
+        "Do not attempt to extract the venom; instead, go directly to the nearest emergency facility."
+      ]
+    }
+  },
+  "footer": {
+    "nav1": {
+      "about": "About",
+      "terms": "Terms of Use",
+      "privacy": "Privacy",
+      "aid": "First Aid"
+    },
+    "nav2": {
+      "press": "Press",
+      "blog": "Our blog",
+      "instructions": "Instructions"
+    },
+    "copyright": "© {{year}} ToxiQR. All rights reserved."
   }
 }

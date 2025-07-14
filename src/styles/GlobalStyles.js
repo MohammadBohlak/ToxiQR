@@ -48,7 +48,7 @@ export const GlobalStyles = createGlobalStyle`
       --normal-text: 1.8rem; 
       --small-text: 16px; 
       --min-text: 1.2rem; 
-      
+     --height-nav: 75px 
     }
   }
 `;

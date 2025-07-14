@@ -18,6 +18,9 @@ const SwitchWrapper = styled.button`
   &:hover {
     background-color: #e0e0e0;
   }
+  @media (max-width: 768px) {
+    width: 60px;
+  }
 `;
 
 const LanguageSwitcher = () => {

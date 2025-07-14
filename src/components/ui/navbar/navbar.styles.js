@@ -20,7 +20,7 @@ export const StyledNavbar = styled(Navbar)`
     justify-content: flex-start !important;
     background: ${({ theme }) => theme.colors.bacgroundNav};
     @media (min-width: 992px) {
-      height: 100%;
+      height: var(--height-nav);
     }
   }
   @media (max-width: 768px) {

@@ -16,6 +16,8 @@ import Privacy from "./pages/privacy/Privacy";
 import Terms from "./pages/terms/Terms";
 import Instructions from "./pages/instructions/Instructions";
 import JoinUs from "./pages/joinUs/JoinUs";
+import About from "./pages/about/About";
+import FirstAid from "./pages/firstAid/FirstAid";
 
 function App() {
   // const lang = useSelector((state) => state.lang.language)
@@ -37,6 +39,8 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/instructions" element={<Instructions />} />
           <Route path="/join" element={<JoinUs />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/aid" element={<FirstAid />} />
         </Routes>
         <Footer />
       </ThemeProvider>

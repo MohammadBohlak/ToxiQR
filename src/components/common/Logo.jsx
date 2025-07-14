@@ -6,6 +6,9 @@ const StyledLogo = styled.div`
   @media (max-width: 992px) {
     width: 150px;
   }
+  @media (max-width: 768px) {
+    width: 100px;
+  }
   img {
     max-width: 100%;
   }

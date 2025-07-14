@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledSwiper = styled.section`
-  height: 500px;
+  min-height: 500px;
   background: ${({ theme }) => theme.colors.backLight};
   padding-top: var(--m-top);
   .swiper {

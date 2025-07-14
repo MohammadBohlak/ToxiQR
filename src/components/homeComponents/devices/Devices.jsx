@@ -1,9 +1,6 @@
 import { useTranslation } from "react-i18next";
 import app_store from "../../../assets/images/app-store.png";
 import goolge_play from "../../../assets/images/google-play.png";
-import d1 from "../../../assets/images/mockup/black/1.png";
-import d3 from "../../../assets/images/mockup/black/3.png";
-import d4 from "../../../assets/images/mockup/black/4.png";
 import { SubTitle, Text } from "../../common/texts";
 import { LeftDevices, RightDevices, StyledDevices } from "./devices.styles";
 
@@ -25,11 +22,7 @@ const Devices = () => {
             </a>
           </div>
         </LeftDevices>
-        <RightDevices md={6}>
-          <img className="d d4" src={d4} alt="" />
-          <img className="d d1" src={d1} alt="" />
-          <img className="d d3" src={d3} alt="" />
-        </RightDevices>
+        <RightDevices md={6} />
       </StyledDevices>
     </>
   );

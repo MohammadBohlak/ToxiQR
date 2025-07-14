@@ -31,6 +31,9 @@ const JoinBtn = styled(NavLink)`
     background-color: #eee;
     border-color: ${({ theme }) => theme.colors.primary};
   }
+  @media (max-width: 768px) {
+    width: 60px;
+  }
 `;
 
 export default function CustomNavbar() {

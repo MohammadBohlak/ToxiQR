@@ -1,8 +1,10 @@
 import { Col, Row } from "react-bootstrap";
 import styled from "styled-components";
+import mockups from "../../../assets/images/mockups.jpg";
 
 export const StyledDevices = styled(Row)`
-  min-height: 300px;
+  --min-height: 320px;
+  min-height: var(--min-height);
   > div {
     padding: 50px 20px 20px 20px;
   }
@@ -14,7 +16,13 @@ export const StyledDevices = styled(Row)`
 `;
 export const LeftDevices = styled(Col)`
   background-color: white;
+
   padding-left: var(--p-container) !important;
+  min-height: var(--min-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   a {
     width: 160px;
     img {
@@ -38,17 +46,9 @@ export const RightDevices = styled(Col)`
   justify-content: center;
   align-items: center;
   gap: 20px;
-  .d {
-    background-color: ${({ theme }) => theme.colors.primary};
-    img {
-    }
-  }
-  .d1 {
-    max-width: 10%;
-  }
-  .d4,
-  .d3 {
-    max-width: 40%;
-    width: 40%;
-  }
+  background-image: url(${mockups});
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: var(--min-height);
 `;

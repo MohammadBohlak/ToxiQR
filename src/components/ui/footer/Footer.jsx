@@ -1,8 +1,9 @@
 // Footer.jsx
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Row, Col } from "react-bootstrap";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 import logoImg from "../../../assets/images/logo.png";
 import googlePlayImg from "../../../assets/images/google-play.png";
@@ -13,124 +14,132 @@ import { SmallText, Text } from "../../common/texts";
 import {
   BottomBar,
   DownloadBtn,
+  DownloadButtons,
   FooterLink,
+  Icons,
   Logo,
   NavList,
   SocialIcon,
   StyledFooter,
 } from "./footer.styles";
 
-const Footer = () => (
-  <StyledFooter style={{ background: "#eee" }}>
-    <MyContainer>
-      <Row className="m-0 p-5 justify-content-between">
-        <Col sm={12} md={4} lg={2}>
-          <Logo src={logoImg} alt="Logo" />
-        </Col>
-        {/* Column 1: Logo */}
-        <Col sm={12} md={4} lg={2} className="d-flex align-items-center">
-          <NavList>
-            <li>
-              <Text>
-                <FooterLink to="/about">About</FooterLink>
-              </Text>
-            </li>
-            <li>
-              <Text>
-                <FooterLink to="/terms">Terms of Use</FooterLink>
-              </Text>
-            </li>
-            <li>
-              <Text>
-                <FooterLink to="/privacy">Privacy</FooterLink>
-              </Text>
-            </li>
-          </NavList>
-        </Col>
+const Footer = () => {
+  const { t } = useTranslation();
 
-        {/* Column 2: Links */}
-        <Col sm={12} md={4} lg={2}>
-          <NavList>
-            <li>
-              <Text>
-                <FooterLink to="/press">Press</FooterLink>
-              </Text>
-            </li>
-            <li>
-              <Text>
-                <FooterLink to="/blog">Our blog</FooterLink>
-              </Text>
-            </li>
-            <li>
-              <Text>
-                <FooterLink to="/instructions">Instructions</FooterLink>
-              </Text>
-            </li>
-          </NavList>
-        </Col>
+  return (
+    <StyledFooter style={{ background: "#eee" }}>
+      <MyContainer>
+        <Row className="m-0 pts-5 pb-5 justify-content-between">
+          <Col sm={12} md={4} lg={2}>
+            <Logo src={logoImg} alt="Logo" />
+          </Col>
 
-        {/* Column 3: Social Icons */}
-        <Col sm={12} md={4} lg={2} className="icons d-flex align-items-center">
-          <SocialIcon
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "white", background: "#3b5998" }}
-          >
-            <FaFacebookF />
-          </SocialIcon>
-          <SocialIcon
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "white", background: "#1da1f2" }}
-          >
-            <FaTwitter />
-          </SocialIcon>
-          <SocialIcon
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              color: "white",
-              background:
-                "linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)",
-            }}
-          >
-            <FaInstagram />
-          </SocialIcon>
-        </Col>
+          <Col sm={12} md={4} lg={2} className="d-flex align-items-center">
+            <NavList>
+              <li>
+                <Text>
+                  <FooterLink to="/about">{t("footer.nav1.about")}</FooterLink>
+                </Text>
+              </li>
+              <li>
+                <Text>
+                  <FooterLink to="/terms">{t("footer.nav1.terms")}</FooterLink>
+                </Text>
+              </li>
+              <li>
+                <Text>
+                  <FooterLink to="/privacy">
+                    {t("footer.nav1.privacy")}
+                  </FooterLink>
+                </Text>
+              </li>
+              <li>
+                <Text>
+                  <FooterLink to="/aid">{t("footer.nav1.aid")}</FooterLink>
+                </Text>
+              </li>
+            </NavList>
+          </Col>
 
-        <Col
-          sm={12}
-          md={4}
-          lg={4}
-          className="buttons d-flex align-items-center gap-4"
-        >
-          <DownloadBtn
-            href="https://play.google.com/store"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={googlePlayImg} alt="Get it on Google Play" />
-          </DownloadBtn>
-          <DownloadBtn
-            href="https://www.apple.com/app-store/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={appStoreImg} alt="Download on the App Store" />
-          </DownloadBtn>
-        </Col>
-      </Row>
-    </MyContainer>
+          <Col sm={12} md={4} lg={2}>
+            <NavList>
+              <li>
+                <Text>
+                  <FooterLink to="/press">{t("footer.nav2.press")}</FooterLink>
+                </Text>
+              </li>
+              <li>
+                <Text>
+                  <FooterLink to="/blog">{t("footer.nav2.blog")}</FooterLink>
+                </Text>
+              </li>
+              <li>
+                <Text>
+                  <FooterLink to="/instructions">
+                    {t("footer.nav2.instructions")}
+                  </FooterLink>
+                </Text>
+              </li>
+            </NavList>
+          </Col>
 
-    <BottomBar>
-      <SmallText $align="center" className="text-white">
-        © {new Date().getFullYear()} ToxiQR. All rights reserved.
-      </SmallText>
-    </BottomBar>
-  </StyledFooter>
-);
+          <Icons sm={12} md={6} lg={2} className="icons">
+            <SocialIcon
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "white", background: "#3b5998" }}
+            >
+              <FaFacebookF />
+            </SocialIcon>
+            <SocialIcon
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "white", background: "#1da1f2" }}
+            >
+              <FaTwitter />
+            </SocialIcon>
+            <SocialIcon
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: "white",
+                background:
+                  "linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)",
+              }}
+            >
+              <FaInstagram />
+            </SocialIcon>
+          </Icons>
+
+          <DownloadButtons sm={12} md={6} lg={4}>
+            <DownloadBtn
+              href="https://play.google.com/store"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={googlePlayImg} alt="Get it on Google Play" />
+            </DownloadBtn>
+            <DownloadBtn
+              href="https://www.apple.com/app-store/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={appStoreImg} alt="Download on the App Store" />
+            </DownloadBtn>
+          </DownloadButtons>
+        </Row>
+      </MyContainer>
+
+      <BottomBar>
+        <SmallText $align="center" className="text-white">
+          {t("footer.copyright", { year: new Date().getFullYear() })}
+        </SmallText>
+      </BottomBar>
+    </StyledFooter>
+  );
+};
 
 export default Footer;
