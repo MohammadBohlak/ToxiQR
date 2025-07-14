@@ -1,168 +1,94 @@
-// DetectionPage.jsx
-import React, { useState, useRef, useCallback, useEffect } from "react";
-import { FiUpload, FiX } from "react-icons/fi";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
+// src/pages/Detection/DetectionPage.jsx
+import React from "react";
+import { Formik, Form } from "formik";
+import * as Yup from "yup";
+
 import Col from "react-bootstrap/Col";
-import Form from "react-bootstrap/Form";
-import Alert from "react-bootstrap/Alert";
-import "bootstrap/dist/css/bootstrap.min.css";
+import Row from "react-bootstrap/Row";
+
 import MyContainer from "../../components/ui/myContainer/MyContainer";
 import { StyledSection } from "../../components/common/sections";
-import { MainTitle, SmallText, SubTitle } from "../../components/common/texts";
-import {
-  DeleteButton,
-  HiddenInput,
-  Select,
-  UploadContent,
-  UploadZone,
-} from "./detection.styles";
+import { MainTitle, SubTitle } from "../../components/common/texts";
+
+import UploadImage from "../../components/homeComponents/uploadImage/UploadImage";
 import FormDetection from "../../components/formDetection/FormDetection";
+import { useTranslation } from "react-i18next";
+import { Submit } from "./detection.styles";
 
 export default function DetectionPage() {
-  const [dragActive, setDragActive] = useState(false);
-  const [file, setFile] = useState(null);
-  const [error, setError] = useState("");
-  const fileInputRef = useRef(null);
+  const { t } = useTranslation();
 
-  const validateAndSetFile = (candidate) => {
-    if (candidate && candidate.type.startsWith("image/")) {
-      setFile(candidate);
-      setError("");
-    } else {
-      setError("Please upload a valid image file.");
-    }
+  // 1) القيم الابتدائية
+  const initialValues = {
+    email: "",
+    state: "",
+    country: "",
+    image: null,
   };
+  console.log(t("detection.form.email_invalid"));
 
-  const handleDrag = useCallback((e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setError("");
-    if (["dragenter", "dragover"].includes(e.type)) setDragActive(true);
-    else if (e.type === "dragleave") setDragActive(false);
-  }, []);
+  const validationSchema = Yup.object({
+    email: Yup.string()
+      .email(t("detection.validation.email_invalid"))
+      .required(t("detection.validation.email_required")),
 
-  const handleDrop = useCallback((e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setDragActive(false);
-    const dropped = e.dataTransfer.files?.[0] || null;
-    validateAndSetFile(dropped);
-  }, []);
+    state: Yup.string().required(t("detection.validation.state_required")),
 
-  const handleChange = useCallback((e) => {
-    const selected = e.target.files?.[0] || null;
-    validateAndSetFile(selected);
-  }, []);
+    country: Yup.string().required(t("detection.validation.country_required")),
 
-  const handleClickZone = () => {
-    setError("");
-    fileInputRef.current?.click();
+    image: Yup.mixed()
+      .required(t("detection.validation.image_required"))
+      .test(
+        "is-image",
+        t("detection.validation.image_invalid"),
+        (file) => file && file.type.startsWith("image/")
+      ),
+  });
+
+  // 3) عند الإرسال
+  const handleSubmit = (values) => {
+    console.log("Form Values:", values);
+    // هنا ترسل البيانات للسيرفر أو أي إجراء آخر
   };
-
-  const handlePaste = useCallback((e) => {
-    setError("");
-    const items = e.clipboardData?.items || [];
-    for (let item of items) {
-      if (item.kind === "file" && item.type.startsWith("image/")) {
-        const blob = item.getAsFile();
-        validateAndSetFile(blob);
-        return;
-      }
-    }
-    // لو وجد بيانات لكنه ليس صورة:
-    setError("Pasted content is not an image.");
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("paste", handlePaste);
-    return () => window.removeEventListener("paste", handlePaste);
-  }, [handlePaste]);
-
-  const handleDelete = (e) => {
-    e.stopPropagation();
-    setFile(null);
-    setError("");
-  };
-
   return (
-    <div style={{ background: "#fff0b6f0", padingTop: "var(--m-top)" }}>
+    <div style={{ background: "#fff0b6f0", paddingTop: "var(--m-top)" }}>
       <MyContainer>
         <StyledSection>
-          <Row className="m-0 mb-3">
+          <Row className="m-0 mb-4">
             <Col>
               <MainTitle $align="center" className="mb-3">
-                Use ToxiQR’s Detection AI to Identify Snakes and Spiders!
+                {t("detection.title")}
               </MainTitle>
-              <SubTitle $align="center">
-                Please read the instructions before uploading the image
-              </SubTitle>
+              <SubTitle $align="center">{t("detection.subtitle")}</SubTitle>
             </Col>
           </Row>
 
-          {error && (
-            <Row className="m-0 mb-3">
-              <Col md={8}>
-                <Alert variant="danger">{error}</Alert>
-              </Col>
-            </Row>
-          )}
+          {/* 4) غلاف Formik يوفّر السياق للمكونات الفرعية */}
+          <Formik
+            initialValues={initialValues}
+            validationSchema={validationSchema}
+            onSubmit={handleSubmit}
+          >
+            {() => (
+              <Form>
+                <Row className="m-0 mt-4 justify-content-center">
+                  <Col md={8}>
+                    {/* مكوّن رفع الصورة مرتبط بحقل "image" */}
+                    <UploadImage name="image" />
+                  </Col>
 
-          <Row className="m-0 mb-4 justify-content-center">
-            <Col md={4}>
-              <Form.Group controlId="typeSelect">
-                <Select>
-                  <option value="">Select type</option>
-                  <option value="snake">Snake</option>
-                  <option value="spider">Spider</option>
-                </Select>
-              </Form.Group>
-            </Col>
-          </Row>
+                  <Col md={12}>
+                    {/* الحقول النصية واختيار الدولة */}
+                    <FormDetection name="country" />
+                  </Col>
+                </Row>
 
-          <Row className="m-0 justify-content-center">
-            <Col md={8}>
-              <UploadZone
-                $dragActive={dragActive}
-                onClick={handleClickZone}
-                onDragEnter={handleDrag}
-                $align="center"
-                onDragOver={handleDrag}
-                onDragLeave={handleDrag}
-                onDrop={handleDrop}
-              >
-                <HiddenInput
-                  ref={fileInputRef}
-                  type="file"
-                  accept="image/*"
-                  onChange={handleChange}
-                />
-
-                {file ? (
-                  <>
-                    <DeleteButton onClick={handleDelete}>
-                      <FiX />
-                    </DeleteButton>
-                    <img
-                      className="preview"
-                      src={URL.createObjectURL(file)}
-                      alt="Preview"
-                    />
-                  </>
-                ) : (
-                  <UploadContent>
-                    <FiUpload size={48} />
-                    <SmallText className="text-muted">
-                      Drop/Upload/Paste Image here
-                    </SmallText>
-                  </UploadContent>
-                )}
-              </UploadZone>
-            </Col>
-            <Col md={12}>
-              <FormDetection />
-            </Col>
-          </Row>
+                <div style={{ textAlign: "center", marginTop: "16px" }}>
+                  <Submit type="submit">{t("detection.form.submit")}</Submit>
+                </div>
+              </Form>
+            )}
+          </Formik>
         </StyledSection>
       </MyContainer>
     </div>

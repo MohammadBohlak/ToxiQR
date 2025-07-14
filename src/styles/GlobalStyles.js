@@ -29,7 +29,7 @@ export const GlobalStyles = createGlobalStyle`
     @media screen and (max-width: 400px) {
       --p-container:5px;
     }
-    --height-nav:   75px ;
+    --height-nav:   100px ;
     --m-top : 50px ;
     --big-text: 4.2rem ; 
     --normal-text: 2.4rem; 

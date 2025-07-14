@@ -1,11 +1,19 @@
 {
   "navbar": {
     "home": "Home",
+    "instructions": "Instructions",
     "ourBlog": "Our blog",
     "press": "Press",
     "join": "Join us"
   },
-  "howWork": "How it works",
+  "howWork": {
+    "title": "How ToxiQR Works",
+    "steps": {
+      "step1": "Take a phto",
+      "step2": "Get results",
+      "step3": "Verify by email"
+    }
+  },
   "contributing": {
     "title": "Contribute to protecting people and the environment",
     "description": "Every photo or observation you record of a snake whether found in the wild or near homes can greatly enhance our understanding of snake species and help determine their level of venomousness. Through our website, we analyze your sightings with precision to assess whether the snake is venomous, and we share this data with global biodiversity repositories to assist scientists and wildlife experts. A single photo from you could make a difference and help keep others safe."
@@ -48,7 +56,7 @@
   "expert": {
     "title": "Expert opinions",
     "name": "Dr. Leila Nazari",
-    "text": "Platforms like this one revolutionize how we study venomous snakes in the field. By combining community observations with real-time analysis, we unlock new paths for both ecological research and public health awareness. I believe this is the future of citizen-powered science, especially in regions where snake encounters are common."
+    "text": "ToxiQR does a remarkable job at telling apart venomous from non-venomous snakes and spiders, also it does it fast. But what really makes it stand out is that the results aren’t left to AI alone. Every prediction is carefully reviewed by a real expert, adding that extra layer of trust. It’s this smart mix of technology and human experience that makes ToxiQR such a reliable and reassuring tool for anyone dealing with snake encounters."
   },
   "press": {
     "title": "Press",
@@ -75,5 +83,34 @@
     "i7": " The specific species may have a poisonous gland, but the criterion for evaluating the results depends mainly on the effect of this toxicity on human health.",
     "i8": "ToxiQR will save the attached images to improve work quality and use them to train Al models. By attaching an image, you agree to its use for development and training purposes in ToxiQR.",
     "i9": "If you have any suggestions or complaints, please do not hesitate to contact us via ToxiQR accounts on social media or email."
+  },
+  "detection": {
+    "title": "Use ToxiQR’s Detection AI to Identify Snakes and Spiders!",
+    "subtitle": "Please read the instructions before uploading the image",
+    "form": {
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your Email"
+      },
+      "state": "State",
+      "country": {
+        "label": "Country",
+        "placeholder": "Choose your country"
+      },
+      "submit": "Submit"
+    },
+    "validation": {
+      "email_required": "Email is required",
+      "email_invalid": "Invalid email format",
+      "state_required": "State is required",
+      "country_required": "Please select a country",
+      "image_required": "Please upload an image",
+      "image_invalid": "File must be a valid image"
+    },
+    "upload": {
+      "drop_here": "Drop/Upload/Paste Image here",
+      "error_not_image": "Pasted content is not an image.",
+      "error_invalid": "Please upload a valid image file."
+    }
   }
 }

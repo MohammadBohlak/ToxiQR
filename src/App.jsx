@@ -15,6 +15,7 @@ import Footer from "./components/ui/footer/Footer";
 import Privacy from "./pages/privacy/Privacy";
 import Terms from "./pages/terms/Terms";
 import Instructions from "./pages/instructions/Instructions";
+import JoinUs from "./pages/joinUs/JoinUs";
 
 function App() {
   // const lang = useSelector((state) => state.lang.language)
@@ -35,6 +36,7 @@ function App() {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/instructions" element={<Instructions />} />
+          <Route path="/join" element={<JoinUs />} />
         </Routes>
         <Footer />
       </ThemeProvider>

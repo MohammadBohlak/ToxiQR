@@ -6,51 +6,88 @@ import LangSwitch from "../../langSwitch/LangSwitch";
 import { StyledNavbar, StyledNavLink } from "./navbar.styles";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
-import logo from "../../../assets/images/logo.png";
+import Logo from "../../common/Logo";
 
-const Logo = styled.div`
+// زر الانضمام
+const JoinBtn = styled(NavLink)`
+  background-color: ${({ theme }) => theme.colors.primary};
+  border: 2px solid transparent;
+  color: #fff;
+  height: 35px;
   width: 100px;
-  img {
-    max-width: 100%;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: var(--min-text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+    background-color: #eee;
+    border-color: ${({ theme }) => theme.colors.primary};
   }
 `;
 
-const CustomNavbar = () => {
-  // حالة للتحكم بفتح وإغلاق القائمة
+export default function CustomNavbar() {
   const [expanded, setExpanded] = useState(false);
-  // مرجع لتحديد المنطقة الخاصة بالنافبار
+  const [show, setShow] = useState(true);
+  const prevScrollY = useRef(0);
   const navRef = useRef(null);
-  // للحصول على التغييرات في مسار التنقل (بذلك يتم إغلاق القائمة عند النقر على أحد الروابط)
   const location = useLocation();
-
   const { t } = useTranslation();
 
-  // دالة لإغلاق القائمة عند النقر خارجها
+  // إغلاق القائمة عند النقر خارجها
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (navRef.current && !navRef.current.contains(event.target)) {
+    const handleClickOutside = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) {
         setExpanded(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // إغلاق القائمة عند تغيير المسار (أي عند النقر على رابط)
+  // إغلاق القائمة عند تغيير المسار
   useEffect(() => {
     setExpanded(false);
   }, [location]);
 
+  // إخفاء/إظهار عند التمرير
+  useEffect(() => {
+    prevScrollY.current = window.scrollY;
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      if (currentY > prevScrollY.current && currentY > 100) {
+        setShow(false);
+      } else {
+        setShow(true);
+      }
+      prevScrollY.current = currentY;
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // نمط الحركة
+  const navbarStyle = {
+    transform: show ? "translateY(0)" : "translateY(-100%)",
+    transition: "transform 0.3s ease-in-out",
+  };
+
   return (
     <div ref={navRef}>
-      <StyledNavbar expand="md" expanded={expanded}>
+      <StyledNavbar expand="lg" expanded={expanded} style={navbarStyle}>
         <MyContainer>
           <Navbar.Brand as={NavLink} to="/">
-            <Logo>
+            {/* <Logo>
               <img src={logo} alt="logo" />
-            </Logo>
+            </Logo> */}
+            <Logo />
           </Navbar.Brand>
 
           <Navbar.Collapse id="basic-navbar-nav">
@@ -62,6 +99,14 @@ const CustomNavbar = () => {
                 }
               >
                 {t("navbar.home")}
+              </StyledNavLink>
+              <StyledNavLink
+                to="/instructions"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                {t("navbar.instructions")}
               </StyledNavLink>
               <StyledNavLink
                 to="/blog"
@@ -93,7 +138,7 @@ const CustomNavbar = () => {
             className="nav-buttons"
             style={{ display: "flex", alignItems: "center", gap: "10px" }}
           >
-            <JoinBtn>{t("navbar.join")}</JoinBtn>
+            <JoinBtn to="/join">{t("navbar.join")}</JoinBtn>
             <LangSwitch />
             <Navbar.Toggle
               aria-controls="basic-navbar-nav"
@@ -104,23 +149,4 @@ const CustomNavbar = () => {
       </StyledNavbar>
     </div>
   );
-};
-const JoinBtn = styled.button`
-  background-color: ${({ theme }) => theme.colors.primary};
-  border: 2px solid transparent;
-  color: #fff;
-  height: 35px;
-  width: 100px;
-  font-weight: bold;
-  border-radius: 10px;
-  font-size: var(--min-text);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  &:hover {
-    color: ${({ theme }) => theme.colors.primary};
-    background-color: #eee;
-    border-color: ${({ theme }) => theme.colors.primary};
-  }
-`;
-
-export default CustomNavbar;
+}

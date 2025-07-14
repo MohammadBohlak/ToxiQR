@@ -13,11 +13,14 @@ export const StyledNavbar = styled(Navbar)`
   z-index: 10000000;
   padding: 0;
   top: 0;
+  left: 0;
+  right: 0;
+
   .navbar-collapse {
     justify-content: flex-start !important;
     background: ${({ theme }) => theme.colors.bacgroundNav};
-    @media (min-width: 768px) {
-      height: 75px !important;
+    @media (min-width: 992px) {
+      height: 100%;
     }
   }
   @media (max-width: 768px) {
@@ -27,7 +30,8 @@ export const StyledNavbar = styled(Navbar)`
   }
   .show > .navbar-nav {
     width: 100%;
-    margin-top: 10px;
+    /* height: 150px; */
+    margin: 10px 0;
     text-align: center;
   }
   .navbar-toggler {
@@ -62,7 +66,7 @@ export const StyledNavbar = styled(Navbar)`
 
 // إنشاء أنماط مخصصة للروابط باستخدام styled-components
 export const StyledNavLink = styled(NavLink)`
-  margin: 0 2px;
+  margin: 0 5px;
   padding: 10px 20px;
   height: 100%;
   font-weight: bold;
@@ -80,9 +84,9 @@ export const StyledNavLink = styled(NavLink)`
     content: "";
     position: absolute;
     width: 0;
-    height: 2px;
+    height: 3px;
     background: ${({ theme }) => theme.colors.primary};
-    bottom: 0px;
+    bottom: -0;
     transition: width 0.3s;
   }
   &:not(.active):hover::before {

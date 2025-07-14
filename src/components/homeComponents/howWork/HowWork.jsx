@@ -1,7 +1,7 @@
 // Timeline.js
 
 import { useTranslation } from "react-i18next";
-import { MainTitle } from "../../common/texts";
+import { MainTitle, SubTitle, Text } from "../../common/texts";
 import MyContainer from "../../ui/myContainer/MyContainer";
 import {
   Circle,
@@ -11,16 +11,13 @@ import {
   TimelineContainer,
 } from "./howWork.styles";
 import styled from "styled-components";
-import Shared from "./Shared";
-import phone from "../../../assets/images/howWork/phone.png";
 import handPhone from "../../../assets/images/howWork/handPhone.png";
 import msg from "../../../assets/images/howWork/msg.png";
 import screen from "../../../assets/images/howWork/screen.png";
 
 const StyledHowWork = styled.section`
-  /* background-color: ${({ theme }) => theme.colors.backLight}; */
   background-color: #fff;
-  padding: var(--m-top) 0;
+  padding: var(--m-top) 0 calc(var(--m-top) + 30px) 0;
 `;
 export default function HowWork() {
   const { t } = useTranslation();
@@ -28,12 +25,12 @@ export default function HowWork() {
     <StyledHowWork>
       <MyContainer>
         <MainTitle style={{ marginBottom: "30px" }} $align="center">
-          {t("howWork")}
+          {t("howWork.title")}
         </MainTitle>
         <TimelineContainer>
           <StageContainer className="stages">
             <Stage>
-              <img className="phone" src={phone} />
+              {/* <img className="phone" src={phone} /> */}
               <img className="handPhone" src={handPhone} />
             </Stage>
             <Stage>
@@ -45,11 +42,17 @@ export default function HowWork() {
           </StageContainer>
 
           <StageContainer className="tl">
-            <Circle>1</Circle>
+            <Circle>
+              1<SubTitle>{t("howWork.steps.step1")}</SubTitle>
+            </Circle>
             <Connector></Connector>
-            <Circle>2</Circle>
+            <Circle>
+              2<SubTitle>{t("howWork.steps.step2")}</SubTitle>
+            </Circle>
             <Connector></Connector>
-            <Circle>3</Circle>
+            <Circle>
+              3<SubTitle>{t("howWork.steps.step3")}</SubTitle>
+            </Circle>
           </StageContainer>
         </TimelineContainer>
       </MyContainer>
