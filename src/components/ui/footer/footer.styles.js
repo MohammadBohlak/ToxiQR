@@ -28,6 +28,7 @@ export const Icons = styled(Col)`
   justify-content: space-between;
   align-items: center;
   /* padding: 0; */
+  column-gap: 10px;
   @media (max-width: 768px) {
     column-gap: 15px;
   }
