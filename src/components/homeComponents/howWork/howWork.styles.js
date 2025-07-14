@@ -8,13 +8,15 @@ export const TimelineContainer = styled.div`
   --width-stage: 300px;
   --gap: 30px;
   gap: var(--gap);
-  @media (max-width: 992px) {
+  @media (max-width: 1200px) {
     --width-stage: 200px;
   }
   @media (max-width: 768px) {
     flex-direction: row-reverse;
     column-gap: var(--gap);
     justify-content: center;
+  }
+  @media (min-width: 993px) and (max-width: 1200px) {
   }
 `;
 
@@ -43,7 +45,7 @@ export const Circle = styled.div`
   border-radius: 50%;
   font-size: var(--min-text);
   color: white;
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: #d79e21;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,7 +56,7 @@ export const Circle = styled.div`
     width: 300px;
     text-align: center;
     bottom: -50px;
-    color: ${({ theme }) => theme.colors.primary};
+    color: #d79e21;
     @media (max-width: 768px) {
       display: none;
     }
@@ -65,7 +67,7 @@ export const Circle = styled.div`
 export const Connector = styled.div`
   flex: 1;
   height: 4px;
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: #d79e21;
   margin: 0 2px;
 
   @media (max-width: 768px) {
@@ -83,7 +85,7 @@ export const StageContainer = styled.div`
   &.txt {
     /* padding: 0 calc(calc(var(--width-stage) / 4) + calc(var(--gap) / 2)); */
     h2 {
-      color: ${({ theme }) => theme.colors.primary};
+      color: #d79e21;
     }
   }
   @media (max-width: 768px) {

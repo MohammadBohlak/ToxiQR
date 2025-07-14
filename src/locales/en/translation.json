@@ -86,7 +86,7 @@
   },
   "detection": {
     "title": "Use ToxiQR’s Detection AI to Identify Snakes and Spiders!",
-    "subtitle": "Please read the instructions before uploading the image",
+    "subtitle": "Email Confirmation",
     "form": {
       "email": {
         "label": "Email",
