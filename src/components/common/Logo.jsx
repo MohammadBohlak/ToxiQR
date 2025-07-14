@@ -15,7 +15,7 @@ const StyledLogo = styled.div`
 `;
 const Logo = () => {
   return (
-    <StyledLogo>
+    <StyledLogo className="logo">
       <img src={logo} alt="logo" />
     </StyledLogo>
   );

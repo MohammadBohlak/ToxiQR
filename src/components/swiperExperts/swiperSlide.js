@@ -37,6 +37,7 @@ export const StyledSwiper = styled.section`
     align-items: center;
     height: fit-content;
     padding: 0px var(--p-container);
+    hyphens: auto;
     .left {
       flex: 1;
     }

@@ -62,6 +62,16 @@ export const StyledNavbar = styled(Navbar)`
       }
     }
   }
+  @media (min-width: 992px) and (max-width: 1200px) {
+    .logo {
+      margin-left: ${({ theme }) => (theme.lang == "en" ? "-70px" : "auto")};
+      margin-right: ${({ theme }) => (theme.lang == "ar" ? "-70px" : "auto")};
+    }
+    .navbar-nav {
+      margin-left: ${({ theme }) => (theme.lang == "en" ? "-70px" : "auto")};
+      margin-right: ${({ theme }) => (theme.lang == "ar" ? "-70px" : "auto")};
+    }
+  }
 `;
 
 // إنشاء أنماط مخصصة للروابط باستخدام styled-components
