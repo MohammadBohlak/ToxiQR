@@ -53,39 +53,132 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  /**
+   * LATO FAMILY
+   * ------------------------------------------
+   * Lato-Thin            100 normal
+   * Lato-ThinItalic      100 italic
+   * Lato-Regular         400 normal
+   * Lato-Italic          400 italic
+   * Lato-LightItalic     300 italic
+   * Lato-Bold            700 normal
+   * Lato-BoldItalic      700 italic
+   * Lato-Black           900 normal
+   * Lato-BlackItalic     900 italic
+   */
+  @font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+  }
 
-  /* 1. تعريف Tajawal */
+  /**
+   * TAJAWAL FAMILY
+   * ------------------------------------------
+   * Tajawal-ExtraLight   200 normal
+   * Tajawal-Light        300 normal
+   * Tajawal-Regular      400 normal
+   * Tajawal-Medium       500 normal
+   * Tajawal-ExtraBold    800 normal
+   * Tajawal-Black        900 normal
+   */
   @font-face {
     font-family: 'Tajawal';
-    src: url('/fonts/Tajawal-Regular.woff2') format('woff2'),
-         url('/fonts/Tajawal-Regular.woff') format('woff');
+    src: url('/fonts/Tajawal-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Tajawal';
+    src: url('/fonts/Tajawal-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Tajawal';
+    src: url('/fonts/Tajawal-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
   }
   @font-face {
     font-family: 'Tajawal';
-    src: url('/fonts/Tajawal-Bold.woff2') format('woff2'),
-         url('/fonts/Tajawal-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  /* 2. تعريف Lato */
-  @font-face {
-    font-family: 'Lato';
-    src: url('/fonts/Lato-Regular.woff2') format('woff2'),
-         url('/fonts/Lato-Regular.woff') format('woff');
-    font-weight: 400;
+    src: url('/fonts/Tajawal-Medium.ttf') format('truetype');
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
   }
   @font-face {
-    font-family: 'Lato';
-    src: url('/fonts/Lato-Bold.woff2') format('woff2'),
-         url('/fonts/Lato-Bold.woff') format('woff');
-    font-weight: 700;
+    font-family: 'Tajawal';
+    src: url('/fonts/Tajawal-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Tajawal';
+    src: url('/fonts/Tajawal-Black.ttf') format('truetype');
+    font-weight: 900;
     font-style: normal;
     font-display: swap;
   }
