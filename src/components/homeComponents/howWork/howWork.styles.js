@@ -48,6 +48,9 @@ export const Circle = styled.span`
   width: 30px;
   line-height: 150%;
   padding: 0px;
+  span {
+    /* transform: translateY(50%); */
+  }
   box-sizing: initial;
   margin: 0;
   /* font-size: var(--min-text);  */
