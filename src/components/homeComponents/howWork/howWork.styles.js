@@ -55,7 +55,7 @@ export const Circle = styled.span`
   box-sizing: initial;
   margin: 0;
   /* font-size: var(--min-text);  */
-  font-size: 20px;
+  font-size: 16px;
   color: white;
   background-color: #d79e21;
   display: flex;
