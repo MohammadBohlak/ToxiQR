@@ -50,7 +50,6 @@ export const Circle = styled.span`
   padding: 0px;
   span {
     /* transform: translateY(50%); */
-    font-family: sans-serif !important;
   }
   box-sizing: initial;
   margin: 0;

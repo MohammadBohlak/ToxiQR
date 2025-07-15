@@ -12,12 +12,12 @@ export const GlobalStyles = createGlobalStyle`
 
   }
   html{
-    font-family: 'Tajawal', sans-serif !important;
+    /* font-family: 'Tajawal', sans-serif !important; */
     font-size: 10px;
   }
   body{
     background-color: #fff;
-    font-family: 'Tajawal', sans-serif !important;
+    /* font-family: 'Tajawal', sans-serif !important; */
     padding-top: var(--height-nav);
   }
  
@@ -52,4 +52,54 @@ export const GlobalStyles = createGlobalStyle`
      --height-nav: 75px 
     }
   }
+
+
+  /* 1. تعريف Tajawal */
+  @font-face {
+    font-family: 'Tajawal';
+    src: url('/fonts/Tajawal-Regular.woff2') format('woff2'),
+         url('/fonts/Tajawal-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Tajawal';
+    src: url('/fonts/Tajawal-Bold.woff2') format('woff2'),
+         url('/fonts/Tajawal-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* 2. تعريف Lato */
+  @font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-Regular.woff2') format('woff2'),
+         url('/fonts/Lato-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-Bold.woff2') format('woff2'),
+         url('/fonts/Lato-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* 3. اختيار العائلة على أساس لغة الصفحة */
+  html[lang="ar"] {
+   body{
+     font-family: 'Tajawal', sans-serif !important;
+   }
+  }
+  html[lang="en"] {
+    body{
+    font-family: 'Lato', sans-serif !important;
+
+    }
+}
 `;
