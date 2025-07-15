@@ -199,7 +199,7 @@ export const GlobalStyles = createGlobalStyle`
   /* 3. اختيار العائلة على أساس لغة الصفحة */
   html[lang="ar"] {
    body{
-     /* font-family: 'Tajawal', sans-serif !important; */
+     font-family: 'Tajawal', sans-serif !important;
  
 
     }
