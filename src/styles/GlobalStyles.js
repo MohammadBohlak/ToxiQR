@@ -186,14 +186,14 @@ export const GlobalStyles = createGlobalStyle`
   /* 3. اختيار العائلة على أساس لغة الصفحة */
   html[lang="ar"] {
    body{
-     font-family: 'Tajawal', sans-serif !important;
-     line-height: 1.6;
+     /* font-family: 'Tajawal', sans-serif !important; */
+     /* line-height: 1.6; */
     }
   }
   html[lang="en"] {
     body{
-      /* font-family: 'Lato', sans-serif !important; */
-      line-height: 1.5;
+      font-family: 'Lato', sans-serif !important;
+      /* line-height: 1.5; */
 
     }
 }
