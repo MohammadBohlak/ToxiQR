@@ -42,7 +42,7 @@ export const Stage = styled.div`
 `;
 
 // الدائرة الصغيرة للرقم (كما قبل)
-export const Circle = styled.div`
+export const Circle = styled.span`
   border-radius: 50%;
   height: 30px;
   width: 30px;
