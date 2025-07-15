@@ -46,7 +46,7 @@ export const Circle = styled.span`
   border-radius: 50%;
   height: 30px;
   width: 30px;
-  line-height: 150%;
+  /* line-height: 150%; */
   padding: 0px;
   span {
     /* transform: translateY(50%); */
