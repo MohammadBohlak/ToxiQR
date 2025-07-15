@@ -46,13 +46,12 @@ export const Circle = styled.span`
   border-radius: 50%;
   height: 30px;
   width: 30px;
-  /* line-height: 150%; */
   padding: 0px;
-  span {
-    /* transform: translateY(50%); */
-  }
   box-sizing: initial;
   margin: 0;
+  span {
+    font-family: sans-serif !important;
+  }
   /* font-size: var(--min-text);  */
   font-size: 16px;
   color: white;

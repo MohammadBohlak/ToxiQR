@@ -207,8 +207,6 @@ export const GlobalStyles = createGlobalStyle`
   html[lang="en"] {
     body{
       font-family: 'Lato', sans-serif !important;
-      /* line-height: 1.5; */
-
     }
 }
 `;
