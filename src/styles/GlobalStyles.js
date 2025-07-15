@@ -141,59 +141,66 @@ export const GlobalStyles = createGlobalStyle`
    * Tajawal-Black        900 normal
    */
   @font-face {
-    font-family: 'Tajawal';
-    src: url('/fonts/Tajawal-ExtraLight.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
+  font-family: "Tajawal";
+  src: url("/fonts/Tajawal-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
     font-display: swap;
-  }
-  @font-face {
-    font-family: 'Tajawal';
-    src: url('/fonts/Tajawal-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
+
+}
+
+@font-face {
+  font-family: "Tajawal";
+  src: url("/fonts/Tajawal-Light.ttf") format("truetype");
+  font-weight: 300;
     font-display: swap;
-  }
-  @font-face {
-    font-family: 'Tajawal';
-    src: url('/fonts/Tajawal-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
+
+}
+
+@font-face {
+  font-family: "Tajawal";
+  src: url("/fonts/Tajawal-Regular.ttf") format("truetype");
+  font-weight: 400;
     font-display: swap;
-  }
-  @font-face {
-    font-family: 'Tajawal';
-    src: url('/fonts/Tajawal-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
+
+}
+
+@font-face {
+  font-family: "Tajawal";
+  src: url("/fonts/Tajawal-Medium.ttf") format("truetype");
+  font-weight: 500;
     font-display: swap;
-  }
-  @font-face {
-    font-family: 'Tajawal';
-    src: url('/fonts/Tajawal-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
+
+}
+
+@font-face {
+  font-family: "Tajawal";
+  src: url("/fonts/Tajawal-Bold.ttf") format("truetype");
+  font-weight: 700;
     font-display: swap;
-  }
-  @font-face {
-    font-family: 'Tajawal';
-    src: url('/fonts/Tajawal-Black.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
+
+}
+
+@font-face {
+  font-family: "Tajawal";
+  src: url("/fonts/Tajawal-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
     font-display: swap;
-  }
+
+}
+
+@font-face {
+  font-family: "Tajawal";
+  src: url("/fonts/Tajawal-Black.ttf") format("truetype");
+  font-weight: 900;
+    font-display: swap;
+
+}
 
   /* 3. اختيار العائلة على أساس لغة الصفحة */
   html[lang="ar"] {
    body{
-     font-family: 'Tajawal', sans-serif !important;
-     p, * {
-  line-height: 1.6 !important;  /* مناسب لـ Tajawal الذي له x-height كبير */
-}
-
-h1, h2, h3 {
-  line-height: 1.3 !important;
-}
+     /* font-family: 'Tajawal', sans-serif !important; */
+ 
 
     }
   }
