@@ -11,6 +11,7 @@ import appStoreImg from "../../../assets/images/app-store.png";
 import MyContainer from "../myContainer/MyContainer";
 import { StyledSection } from "../../common/sections";
 import { SmallText, Text } from "../../common/texts";
+import logoTwittter from "../../../assets/images/logoX.webp";
 import {
   BottomBar,
   DownloadBtn,
@@ -104,9 +105,10 @@ const Footer = () => {
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "white", background: "#1da1f2" }}
+              style={{ color: "white", background: "#000" }}
             >
-              <FaTwitter />
+              {/* <FaTwitter /> */}
+              <img src={logoTwittter} />
             </SocialIcon>
             <SocialIcon
               href="https://instagram.com"

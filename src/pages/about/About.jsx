@@ -35,14 +35,12 @@ const About = () => {
           </div>
           <div className="m-auto">
             <SubTitle $align="center">{t("about.team.title")}</SubTitle>
-            <Text $align="center">
-              <strong>{t("about.team.member1.name")}</strong> ,{" "}
-              {t("about.team.member1.specialist")}
-            </Text>
-            <Text $align="center">
-              <strong>{t("about.team.member2.name")}</strong> ,{" "}
-              {t("about.team.member2.specialist")}
-            </Text>
+            {[1, 2, 3].map((e, i) => (
+              <Text key={i} $align="center">
+                <strong>{t(`about.team.member${e}.name`)}</strong> ,{" "}
+                {t(`about.team.member${e}.specialist`)}
+              </Text>
+            ))}
           </div>
         </StyledAbout>
       </StyledSection>

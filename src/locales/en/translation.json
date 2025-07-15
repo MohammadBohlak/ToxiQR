@@ -130,11 +130,15 @@
       "title": "Team Members",
       "member1": {
         "name": "Abdulaziz Arif A Alshammari",
-        "specialist": "PharmD, MSc in Clinical Toxicology."
+        "specialist": "MSc in Clinical Toxicology."
       },
       "member2": {
         "name": "Mohammed Almatrafi",
-        "specialist": "PharmD, Pursuing MSc Clinical Toxicology."
+        "specialist": "MSc in Clinical Toxicology."
+      },
+      "member3": {
+        "name": "Razan Alawaji",
+        "specialist": "MSc in Clinical Toxicology."
       }
     }
   },

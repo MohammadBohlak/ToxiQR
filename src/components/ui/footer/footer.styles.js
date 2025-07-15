@@ -53,6 +53,9 @@ export const SocialIcon = styled.a`
     width: 40px;
     font-size: 28px;
   }
+  img {
+    max-width: 100%;
+  }
   color: ${(props) => props.color};
   font-size: 35px;
   /* margin-right: ${({ theme }) => (theme.lang == "en" ? "10px" : "auto")}; */

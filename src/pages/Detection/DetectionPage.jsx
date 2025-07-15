@@ -25,7 +25,6 @@ export default function DetectionPage() {
     country: "",
     image: null,
   };
-  console.log(t("detection.form.email_invalid"));
 
   const validationSchema = Yup.object({
     email: Yup.string()
