@@ -187,11 +187,13 @@ export const GlobalStyles = createGlobalStyle`
   html[lang="ar"] {
    body{
      font-family: 'Tajawal', sans-serif !important;
-   }
+     line-height: 1.6;
+    }
   }
   html[lang="en"] {
     body{
-    font-family: 'Lato', sans-serif !important;
+      font-family: 'Lato', sans-serif !important;
+      line-height: 1.5;
 
     }
 }
