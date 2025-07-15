@@ -49,7 +49,7 @@ export const Circle = styled.div`
   padding: 0;
   margin: 0;
   /* font-size: var(--min-text);  */
-  font-size: 16px;
+  font-size: 20px;
   color: white;
   background-color: #d79e21;
   display: flex;
@@ -59,6 +59,7 @@ export const Circle = styled.div`
   position: relative;
   vertical-align: middle;
   text-align: center;
+  line-height: 100%;
   h2 {
     position: absolute;
     width: 300px;
