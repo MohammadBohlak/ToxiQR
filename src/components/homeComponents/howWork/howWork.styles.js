@@ -43,10 +43,11 @@ export const Stage = styled.div`
 
 // الدائرة الصغيرة للرقم (كما قبل)
 export const Circle = styled.div`
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  font-size: var(--min-text);
+  /* font-size: var(--min-text);  */
+  font-size: 16px;
   color: white;
   background-color: #d79e21;
   display: flex;
@@ -54,7 +55,6 @@ export const Circle = styled.div`
   justify-content: center;
   font-weight: bold;
   position: relative;
-  line-height: 100%;
   h2 {
     position: absolute;
     width: 300px;
