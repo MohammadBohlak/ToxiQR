@@ -43,15 +43,18 @@ export default function HowWork() {
 
           <StageContainer className="tl">
             <Circle>
-              1<SubTitle>{t("howWork.steps.step1")}</SubTitle>
+              <span>1</span>
+              <SubTitle>{t("howWork.steps.step1")}</SubTitle>
             </Circle>
             <Connector></Connector>
             <Circle>
-              2<SubTitle>{t("howWork.steps.step2")}</SubTitle>
+              <span>2</span>
+              <SubTitle>{t("howWork.steps.step2")}</SubTitle>
             </Circle>
             <Connector></Connector>
             <Circle>
-              3<SubTitle>{t("howWork.steps.step3")}</SubTitle>
+              <span>3</span>
+              <SubTitle>{t("howWork.steps.step3")}</SubTitle>
             </Circle>
           </StageContainer>
         </TimelineContainer>
