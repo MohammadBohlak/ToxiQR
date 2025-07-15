@@ -62,21 +62,12 @@ export const StyledNavbar = styled(Navbar)`
       }
     }
   }
-  @media (min-width: 992px) and (max-width: 1200px) {
-    .logo {
-      margin-left: ${({ theme }) => (theme.lang == "en" ? "-70px" : "auto")};
-      margin-right: ${({ theme }) => (theme.lang == "ar" ? "-70px" : "auto")};
-    }
-    .navbar-nav {
-      margin-left: ${({ theme }) => (theme.lang == "en" ? "-70px" : "auto")};
-      margin-right: ${({ theme }) => (theme.lang == "ar" ? "-70px" : "auto")};
-    }
-  }
 `;
 
 // إنشاء أنماط مخصصة للروابط باستخدام styled-components
 export const StyledNavLink = styled(NavLink)`
-  margin: 0 5px;
+  margin: 0;
+  margin-left: 15px;
   padding: 10px 20px;
   height: 100%;
   font-weight: bold;
@@ -96,10 +87,10 @@ export const StyledNavLink = styled(NavLink)`
     width: 0;
     height: 3px;
     background: ${({ theme }) => theme.colors.primary};
-    bottom: -0;
+    bottom: 0;
     transition: width 0.3s;
   }
   &:not(.active):hover::before {
-    width: calc(100%);
+    width: 100%;
   }
 `;

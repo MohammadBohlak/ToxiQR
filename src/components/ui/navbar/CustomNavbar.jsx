@@ -86,7 +86,7 @@ export default function CustomNavbar() {
     <div ref={navRef}>
       <StyledNavbar expand="lg" expanded={expanded} style={navbarStyle}>
         <MyContainer>
-          <Navbar.Brand as={NavLink} to="/">
+          <Navbar.Brand as={NavLink} to="/" className="m-0 p-0">
             {/* <Logo>
               <img src={logo} alt="logo" />
             </Logo> */}

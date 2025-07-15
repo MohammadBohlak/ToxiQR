@@ -15,13 +15,16 @@ import {
   BottomBar,
   DownloadBtn,
   DownloadButtons,
+  FooterContent,
   FooterLink,
   Icons,
-  Logo,
+  Links,
+  // Logo,
   NavList,
   SocialIcon,
   StyledFooter,
 } from "./footer.styles";
+import Logo from "../../common/Logo";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -29,12 +32,17 @@ const Footer = () => {
   return (
     <StyledFooter style={{ background: "#eee" }}>
       <MyContainer>
-        <Row className="m-0 pts-5 pb-5 justify-content-between">
-          <Col sm={12} md={4} lg={2}>
+        <Row className="m-0 p-0 pts-5 pb-5 justify-content-between   ">
+          <Col
+            sm={12}
+            md={12}
+            lg={2}
+            className="d-flex align-items-center justify-content-md-center justify-content-lg-start"
+          >
             <Logo src={logoImg} alt="Logo" />
           </Col>
 
-          <Col sm={12} md={4} lg={2} className="d-flex align-items-center">
+          <Links sm={12} md={4} lg={2} className="d-flex align-items-center">
             <NavList>
               <li>
                 <Text>
@@ -59,9 +67,9 @@ const Footer = () => {
                 </Text>
               </li>
             </NavList>
-          </Col>
+          </Links>
 
-          <Col sm={12} md={4} lg={2}>
+          {/* <Col sm={12} md={4} lg={2}>
             <NavList>
               <li>
                 <Text>
@@ -81,9 +89,9 @@ const Footer = () => {
                 </Text>
               </li>
             </NavList>
-          </Col>
+          </Col> */}
 
-          <Icons sm={12} md={6} lg={2} className="icons">
+          <Icons sm={12} md={4} lg={3} className="icons">
             <SocialIcon
               href="https://facebook.com"
               target="_blank"
@@ -114,7 +122,7 @@ const Footer = () => {
             </SocialIcon>
           </Icons>
 
-          <DownloadButtons sm={12} md={6} lg={4}>
+          <DownloadButtons sm={12} md={4} lg={4}>
             <DownloadBtn
               href="https://play.google.com/store"
               target="_blank"

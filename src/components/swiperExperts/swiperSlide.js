@@ -37,9 +37,11 @@ export const StyledSwiper = styled.section`
     align-items: center;
     height: fit-content;
     padding: 0px var(--p-container);
-    hyphens: auto;
     .left {
       flex: 1;
+      hyphens: auto !important;
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
     }
     .right {
       flex: 1;
@@ -48,7 +50,6 @@ export const StyledSwiper = styled.section`
     }
     img {
       width: 50%;
-
       border-radius: 50%;
     }
     @media (max-width: 768px) {

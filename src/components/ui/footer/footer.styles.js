@@ -2,10 +2,12 @@ import { Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const Logo = styled.img`
-  max-width: 150px;
-`;
+// export const Logo = styled.img`
+//   max-width: 50px;
+//   margin-right: -50%;
+// `;
 
+export const FooterContent = styled.div``;
 export const NavList = styled.ul`
   list-style: none;
   padding: 0;
@@ -23,14 +25,26 @@ export const FooterLink = styled(Link)`
   }
 `;
 
+export const Links = styled(Col)`
+  margin: 0;
+  padding: 0;
+  @media (max-width: 992px) {
+    /* justify-content: center; */
+  }
+`;
+
 export const Icons = styled(Col)`
   display: flex;
   justify-content: space-between;
   align-items: center;
   /* padding: 0; */
-  column-gap: 10px;
+  column-gap: 20px;
   @media (max-width: 768px) {
-    column-gap: 15px;
+    /* column-gap: 15px; */
+  }
+  @media (max-width: 992px) {
+    justify-content: center;
+    /* column-gap: 30px; */
   }
 `;
 export const SocialIcon = styled.a`
@@ -62,8 +76,11 @@ export const DownloadButtons = styled(Col)`
   display: flex;
   gap: 30px;
   justify-content: end;
-  @media (max-width: 768px) {
-    margin-top: 20px;
+  @media (max-width: 992px) {
+    /* margin-top: 20px; */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
   }
 `;
 export const DownloadBtn = styled.a`
@@ -97,15 +114,15 @@ export const BottomBar = styled.div`
 `;
 export const StyledFooter = styled.section`
   padding: var(--m-top) 0 0 0;
-  .icons {
-    /* justify-content: space-between; */
+  .logo {
+    width: 100px;
   }
   .buttons {
     justify-content: end;
   }
   .row {
     @media (max-width: 768px) {
-      gap: 10px;
+      gap: 30px;
       * {
         text-align: center !important;
       }

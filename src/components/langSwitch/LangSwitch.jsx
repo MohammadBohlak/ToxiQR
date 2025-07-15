@@ -14,7 +14,7 @@ const SwitchWrapper = styled.button`
   transition: background 0.3s;
   border: none;
   cursor: pointer;
-
+  color: black;
   &:hover {
     background-color: #e0e0e0;
   }

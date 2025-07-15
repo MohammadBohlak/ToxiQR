@@ -27,7 +27,7 @@ const SwiperExperts = () => {
         {[1, 2].map((item, idx) => (
           <SwiperSlide key={idx}>
             <div className="left d-flex flex-column gap-3">
-              <Text>{t("expert.text")}</Text>
+              <Text className="text">{t("expert.text")}</Text>
               <SubTitle $color="var(--primary)">{t("expert.name")}</SubTitle>
               <Text>{t("expert.specialist")}</Text>
               <Text>
