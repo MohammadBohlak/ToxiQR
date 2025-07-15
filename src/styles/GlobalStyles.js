@@ -187,7 +187,6 @@ export const GlobalStyles = createGlobalStyle`
   html[lang="ar"] {
    body{
      font-family: 'Tajawal', sans-serif !important;
-     font-family: 'Lato', sans-serif !important;
      p, * {
   line-height: 1.6 !important;  /* مناسب لـ Tajawal الذي له x-height كبير */
 }
