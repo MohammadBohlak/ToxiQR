@@ -7,12 +7,27 @@ import { Provider } from "react-redux";
 import { store } from "./store/store";
 import Footer from "./components/ui/footer/Footer";
 
-createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <StrictMode>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </StrictMode>
-  </BrowserRouter>
-);
+// createRoot(document.getElementById("root")).render(
+//   <BrowserRouter>
+//     <StrictMode>
+//       <Provider store={store}>
+//         <App />
+//       </Provider>
+//     </StrictMode>
+//   </BrowserRouter>
+// );
+
+fetch("/config.json")
+  .then((res) => res.json())
+  .then((config) => {
+    window.appConfig = config;
+    createRoot(document.getElementById("root")).render(
+      <BrowserRouter>
+        <StrictMode>
+          <Provider store={store}>
+            <App />
+          </Provider>
+        </StrictMode>
+      </BrowserRouter>
+    );
+  });
