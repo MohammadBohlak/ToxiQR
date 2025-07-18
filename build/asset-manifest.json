@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a7e061e2.css",
+    "main.js": "/static/js/main.9fd976e1.js",
+    "static/media/blog.png": "/static/media/blog.0175674c790162f12b99.png",
+    "static/media/handPhone.png": "/static/media/handPhone.4d32c5eb563aa76aa604.png",
+    "static/media/msg.png": "/static/media/msg.3b422a7b9690207861dd.png",
+    "static/media/screen.png": "/static/media/screen.aad4b60703f900b4cfb2.png",
+    "static/media/3.jpg": "/static/media/3.158add9185bae6b640e9.jpg",
+    "static/media/1.jpg": "/static/media/1.a317a6d344edb09c4bbd.jpg",
+    "static/media/4.jpg": "/static/media/4.08e75662c2919538d655.jpg",
+    "static/media/5.jpg": "/static/media/5.08e75662c2919538d655.jpg",
+    "static/media/logo.png": "/static/media/logo.9e80b177979521670374.png",
+    "static/media/contributing.jpg": "/static/media/contributing.b68ffd982470c8b53f9f.jpg",
+    "static/media/2.jpg": "/static/media/2.4fd375e35675289c07c4.jpg",
+    "static/media/mockups.jpg": "/static/media/mockups.016ad8a15b30af54a35a.jpg",
+    "static/media/expert.png": "/static/media/expert.03e6d1e463473f0e05fd.png",
+    "static/media/logoX.webp": "/static/media/logoX.f0372242f5d0e698c04f.webp",
+    "static/media/google-play.png": "/static/media/google-play.1c0f4eb56e950c23d044.png",
+    "index.html": "/index.html",
+    "main.a7e061e2.css.map": "/static/css/main.a7e061e2.css.map",
+    "main.9fd976e1.js.map": "/static/js/main.9fd976e1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a7e061e2.css",
+    "static/js/main.9fd976e1.js"
+  ]
+}
