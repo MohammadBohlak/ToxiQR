@@ -1,33 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MyContainer from "../../components/ui/myContainer/MyContainer";
 import { MainTitle, SubTitle, Text } from "../../components/common/texts";
 import { Col, Row } from "react-bootstrap";
 import { highlights } from "./data";
-import styled from "styled-components";
 import { useTranslation } from "react-i18next";
+import { StyledPress, TextContent } from "./press.styles";
+import { api } from "../../utils/api/api";
 
-const TextContent = styled.div`
-  div {
-    color: #555;
-    text-transform: uppercase;
-    font-size: var(--min-text);
-  }
-  a {
-    font-size: var(--small-text);
-    text-decoration: none;
-  }
-`;
-const StyledPress = styled(Row)`
-  @media (max-width: 768px) {
-    > div {
-      justify-content: center;
-      * {
-        text-align: center !important;
-      }
-    }
-  }
-`;
 const Press = () => {
+  const [presses, setPtresses] = useState([]);
+  useEffect(() => {
+    api.get("/press").then((res) => {
+      console.log(res.data);
+      setPtresses(res.data);
+    });
+  }, []);
+
   const { t } = useTranslation();
   return (
     <MyContainer>
@@ -36,13 +24,13 @@ const Press = () => {
           <MainTitle $align="initial">{t("press.title")}</MainTitle>
           <SubTitle>{t("press.subtitle")}</SubTitle>
           <Text>{t("press.description")}</Text>
-          {highlights.map((item, idx) => (
+          {presses.map((item, idx) => (
             <TextContent key={idx} className="highlight">
               <div className="meta">
-                {item.date} • {item.source}
+                {item.date} • {item.website_name}
               </div>
               <a href={item.link} target="_blank" rel="noopener noreferrer">
-                {item.text}
+                {item.link}
               </a>
             </TextContent>
           ))}

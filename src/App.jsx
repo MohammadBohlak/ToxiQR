@@ -19,6 +19,8 @@ import JoinUs from "./pages/joinUs/JoinUs";
 import About from "./pages/about/About";
 import FirstAid from "./pages/firstAid/FirstAid";
 import { useEffect } from "react";
+import Loader from "./components/ui/Loader";
+import { useSelector } from "react-redux";
 
 function App() {
   // const lang = useSelector((state) => state.lang.language)
@@ -30,6 +32,7 @@ function App() {
   // const { i18n: i18nextInstance } = useTranslation()
   // const theme = useSelector((state) => state.theme);
   const direction = i18n.language === "ar" ? "rtl" : "ltr";
+  const showLoader = useSelector((state) => state.loader.isLoading);
 
   return (
     <>
@@ -38,6 +41,7 @@ function App() {
         <ThemeProvider theme={{ ...theme, lang: i18n.language }}>
           <CustomNavbar />
           <GlobalStyles />
+          {showLoader && <Loader />}
           <Routes>
             <Route path="/" index element={<Home />} />
             <Route path="/press" element={<Press />} />
